@@ -4,10 +4,7 @@ RUN mkdir /home/Portfolio
 WORKDIR /home/Portfolio
 COPY . .
 RUN npm install && \
-    npm run build && \
-    rm -f dist/index.html && \
-    mv ./dist/src/pages/* ./dist && \
-    rm -rf ./dist/src 
+    npm run build
 
 # Stage 2: Serve Vue app with Nginx
 FROM nginx:1.29.0 as prod-stage
