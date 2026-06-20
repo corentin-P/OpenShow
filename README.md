@@ -2,13 +2,13 @@
 
 ## Getting started
 
-This repository contains basic graphical components and architecture to create a Portfolio or a showcase site without programming.
+This repository contains basic graphical components and architecture to create a showcase website without programming.
 
 You can find an exemple website [here](https://portfolio-demo.corentin-piquerez.fr/), which contains all the graphical components available.
 
-You can also pull the docker image `clashcoco/portfolio:1.0` which is the official image of the example website.
+You can also pull the docker image `clashcoco/openshow:1.0.2` which is the official image of the example website.
 ```sh
-docker pull clashcoco:portfolio:1.0
+docker pull clashcoco/openshow:1.0.2
 ```
 
 ![homepage](./doc/homepage.png)
@@ -19,30 +19,7 @@ First, I really recommend you to mirror this repository, so you have your own re
 
 Then, you'll be able to modify the website. 
 
-### Mirror this repository
-
-1. Clone the Original Repository as a Bare Mirror
-
-```
-git clone --mirror https://github.com/corentin-P/Portfolio.git
-```
-
-2. Create a repository on your github account
-
-3. Push the Mirror to Your GitHub Repository
-```
-cd abc-repo.git
-git remote set-url --push origin https://github.com/your-username/mirror-repo.git
-git push --mirror
-```
-
-4. Fetch Updates from the Original Repository
-```
-git fetch -p origin
-git push --mirror
-```
-
-5. Then you can edit the files and push it to your new repository. 
+To Mirror this repository, you can refer to this [wiki](https://github.com/corentin-P/OpenShow/wiki/Mirroring-this-repository)
 
 ### Edit the content of the website
 
