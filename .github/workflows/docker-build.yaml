@@ -1,0 +1,29 @@
+name: Docker-Build
+
+on: [push, pull_request]
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t openshow-test -f Dockerfile.prod .
+
+      - name: Create container to extract dist
+        run: docker create --name extract openshow-test
+
+      - name: Copy dist out of the image
+        run: docker cp extract:/usr/share/nginx/html ./dist
+
+      - name: Remove temporary container0
+        run: docker rm extract
+
+      - name: Upload dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 7
