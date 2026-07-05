@@ -14,7 +14,9 @@
   <div v-if="isModalOpen" class="modal" @click.self="closeModal">
     <div class="modal-content">
       <span class="close" @click="closeModal">&times;</span>
-      <img :src="modalContent.img" :alt="modalContent.alt" class="main-img">
+      <a :href="modalContent.img" target="_blank">
+        <img :src="modalContent.img" :alt="modalContent.alt" class="main-img">
+      </a>
       <hr>
       <h1>
         {{ modalContent.title }}
