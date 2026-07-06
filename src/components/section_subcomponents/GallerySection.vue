@@ -1,22 +1,26 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { ref, computed } from 'vue'
   import Modal from '@/components/Modal.vue'
   import Tags from '@/components/Tags.vue'
 
-  defineProps(['items'])
+  const props = defineProps(['items'])
 
   const isModalOpen = ref<boolean>(false)
-  var currentItem = ref<{}>({})
+  const currentItemIndex = ref<string | null>(null)
+  
+  const currentItem = computed(() => {
+    return currentItemIndex.value !== null ? props.items[currentItemIndex.value] : {}
+  })
 
-  const openModal = (item: {}) => {
-    currentItem.value = item
+  const openModal = (index: string) => {
+    currentItemIndex.value = index
     isModalOpen.value = true
   }
 </script>
 
 <template>
   <div class="cards">
-    <div v-for="item in items" class="card" v-on:click="openModal(item)">
+    <div v-for="(item, index) in items" class="card" v-on:click="openModal(String(index))">
       <div class="card-content">
         <img :src="item.img" :alt="item.alt">
         <hr>

@@ -1,13 +1,57 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { watch, onMounted, onBeforeUnmount } from 'vue'
   import Tags from '@/components/Tags.vue'
+
+  const props = defineProps<{
+    modalContent: Record<string, any>
+    isModalOpen: boolean
+  }>()
   
-  defineProps(['modalContent', 'isModalOpen'])
-  const emit = defineEmits(['update:isModalOpen'])
+
+  const emit = defineEmits<{
+    (e: 'update:isModalOpen', value: boolean): void
+  }>()
 
   const closeModal = () => {
     emit('update:isModalOpen', false)
   }
+
+  const lockBodyScroll = () => {
+    document.body.style.overflow = 'hidden'
+    document.documentElement.style.overflow = 'hidden'
+  }
+
+  const unlockBodyScroll = () => {
+    document.body.style.overflow = ''
+    document.documentElement.style.overflow = ''
+  }
+
+  const handleKeydown = (event: KeyboardEvent) => {
+    if (event.key === 'Escape' && props.isModalOpen) {
+      closeModal()
+    }
+  }
+
+  onMounted(() => {
+    document.addEventListener('keydown', handleKeydown)
+  })
+
+  onBeforeUnmount(() => {
+    document.removeEventListener('keydown', handleKeydown)
+    unlockBodyScroll()
+  })
+
+  watch(
+    () => props.isModalOpen,
+    (isOpen) => {
+      if (isOpen) {
+        lockBodyScroll()
+      } else {
+        unlockBodyScroll()
+      }
+    },
+    { immediate: true }
+  )
 </script>
 
 <template>
@@ -36,7 +80,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <style>
