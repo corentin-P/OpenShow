@@ -259,5 +259,9 @@
                 }
             }
         }
+    },
+    "not-found": {
+        "title": "404 : Page not found",
+        "home": "Back to home"
     }
 }

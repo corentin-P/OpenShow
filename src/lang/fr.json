@@ -255,5 +255,9 @@
                 }
             }
         }
+    },
+    "not-found": {
+        "title": "404 : Page non trouvée",
+        "home": "Retour à l'accueil"
     }
 }

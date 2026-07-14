@@ -5,13 +5,19 @@ import AboutView from './views/about.vue'
 import Contact from './views/contact.vue'
 import Projects from './views/projects.vue'
 import OngoingProjects from './views/ongoing-projects.vue'
+import NotFound from './views/not-found.vue'
 
 const routes = [
   { path: '/', component: HomeView, name:'Home' },
   { path: '/about', component: AboutView, name:'about' },
   { path: '/contact', component: Contact, name:'contact' },
   { path: '/ongoing-projects', component: OngoingProjects, name:'ongoing projects' },
-  { path: '/projects', component: Projects, name:'projects' }
+  { path: '/projects', component: Projects, name:'projects' },
+  { 
+      path: '/:pathMatch(.*)*', 
+      name: 'NotFound', 
+      component: NotFound 
+  }
 ]
 
 const router = createRouter({
