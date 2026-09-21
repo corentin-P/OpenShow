@@ -1,0 +1,147 @@
+main:
+  navbar:
+    title:
+      url: .
+    links:
+      link-left:
+        url: projects
+      link-middle:
+        url: ongoing-projects
+      link-right:
+        url: about
+welcome:
+  projects-url: projects
+  about-url: about
+about:
+  sumup:
+    profile_image: /images/me.png
+    profile_image_desc: Me
+    get-resume:
+      url: /resume.pdf
+  resume:
+    sections:
+      Education:
+        type: experience
+        titleInBox: true
+        content:
+          SC1:
+            img: /images/logos/logo.png
+          SC2:
+            img: /images/logos/logo.png
+          HS:
+            img: /images/logos/logo.png
+      Experience:
+        type: experience
+        titleInBox: true
+        content:
+          EXP1:
+            img: /images/logos/logo.png
+          EXP2:
+            img: /images/logos/logo.png
+      IT skills:
+        titleInBox: true
+        type: logos-list
+        logos:
+        - img: /images/logos/IT/C.png
+          alt: Logo C
+        - img: /images/logos/IT/C++.png
+          alt: Logo C++
+        - img: /images/logos/IT/java.png
+          alt: Logo java
+      Languages:
+        type: logos-description
+        titleInBox: true
+        content:
+          French:
+            img: /images/logos/languages/france.jpg
+          English:
+            img: /images/logos/languages/uk.jpg
+    projects:
+      url: projects
+projects:
+  sections:
+    projects_gallery:
+      type: gallery
+      titleInBox: true
+      content:
+        project1:
+          img: /images/projects/this.png
+          alt: project image
+          main_link: https://github.com
+          links:
+          - icon: /images/logos/IT/GitHub_Invertocat_White.png
+            alt: github logo
+            link: https://github.com/
+          - icon: /images/logos/IT/gitlab-logo.png
+            alt: github logo
+            link: https://gitlab.com/
+          - icon: /images/logos/IT/GitHub_Invertocat_White.png
+            alt: github logo
+            link: https://github.com/
+        project2:
+          img: /images/logos/IT/C.png
+          alt: project image
+          main_link: https://github.com
+        project3:
+          img: /images/logos/IT/java.png
+          alt: project image
+          main_link: https://github.com
+        project4:
+          img: /images/logos/logo.png
+          alt: project image
+          main_link: https://github.com
+        project5:
+          img: /images/logos/logo2.png
+          alt: project image
+    Web:
+      type: projects
+      content:
+        My website:
+          imgs:
+            website:
+              file: /images/projects/logo.png
+              link: https://github.com/
+          links:
+            GitHub:
+              link: https://github.com/
+            website:
+              link: https://github.com/
+        My second website:
+          imgs:
+            website:
+              file: /images/projects/logo.png
+              link: https://github.com/
+          links:
+            GitHub:
+              link: https://github.com/
+            website:
+              link: https://github.com/
+    Mobile:
+      type: projects
+      content:
+        first mobile app:
+          imgs:
+            login:
+              file: /images/projects/logo.png
+              link: https://github.com/
+            feed:
+              file: /images/projects/logo.png
+              link: https://github.com/
+          links:
+            GitHub-front:
+              link: https://github.com/
+            GitHub-back:
+              link: https://github.com/
+ongoing-projects:
+  sections:
+    News:
+      type: section
+contact:
+  sections:
+    text:
+      type: logos-description
+      content:
+        Email:
+          img: /images/logos/contact/email.svg
+        LinkedIn:
+          img: /images/logos/contact/linkedin.png

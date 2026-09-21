@@ -39,5 +39,5 @@
 
 
 <style lang="css">
-  @import '../assets/styles/components/navbar.css';
+  @import 'navbar.css';
 </style>

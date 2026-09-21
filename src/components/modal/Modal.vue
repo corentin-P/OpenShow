@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { watch, onMounted, onBeforeUnmount } from 'vue'
-  import Tags from '@/components/Tags.vue'
+  import Tags from '@/components/tags/Tags.vue'
 
   const props = defineProps<{
     modalContent: Record<string, any>
@@ -58,7 +58,7 @@
   <div v-if="isModalOpen" class="modal" @click.self="closeModal">
     <div class="modal-content">
       <span class="close" @click="closeModal">&times;</span>
-      <a :href="modalContent.img" target="_blank">
+      <a :href="modalContent.img" target="_blank" class="main-img-link">
         <img :src="modalContent.img" :alt="modalContent.alt" class="main-img">
       </a>
       <hr>
@@ -83,5 +83,5 @@
 </template>
 
 <style>
-  @import '@/assets/styles/components/modal.css';
+  @import 'modal.css';
 </style>

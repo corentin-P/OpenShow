@@ -1,9 +1,10 @@
 <script setup lang="ts">
-  import ExperienceSection from '@/components/section_subcomponents/ExperienceSection.vue'
-  import LogosDescriptionsSection from '@/components/section_subcomponents/LogosDescriptionSection.vue'
-  import ProjectSection from '@/components/section_subcomponents/ProjectSection.vue'
-  import GallerySection from '@/components/section_subcomponents/GallerySection.vue';
-  import { is_text_section } from './section_subcomponents/utils';
+  import ExperienceSection from '@/components/section_experience/ExperienceSection.vue'
+  import LogosDescriptionsSection from '@/components/section_logo_description/LogosDescriptionSection.vue'
+  import ProjectSection from '@/components/section_project/ProjectSection.vue'
+  import GallerySection from '@/components/section_gallery/GallerySection.vue';
+  import LogoListSection from '@/components/section_logo_list/LogoListSection.vue';
+  import { is_text_section } from '../utils';
   defineProps(['sections'])
 </script>
 
@@ -18,7 +19,7 @@
         <experience-section :experience="experience"/>
       </div>
       <div v-if="section.type == 'logos-list'" class="logos-list center">
-        <img v-for="logo in section.logos" class="logo" :src="logo.img" :alt="logo.alt">
+        <logo-list-section :logos="section.logos"/>
       </div>
       <div v-if="section.type == 'logos-description'" class="logos-list">
         <logos-descriptions-section :content="section.content"/>
@@ -36,5 +37,5 @@
 </template>
 
 <style>
-  @import '@/assets/styles/components/sections.css';
+  @import 'sections.css';
 </style>

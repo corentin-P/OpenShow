@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref, computed } from 'vue'
-  import Modal from '@/components/Modal.vue'
-  import Tags from '@/components/Tags.vue'
+  import Modal from '@/components/modal/Modal.vue'
+  import Tags from '@/components/tags/Tags.vue'
 
   const props = defineProps(['items'])
 
@@ -37,5 +37,5 @@
 </template>
 
 <style>
-  @import '@/assets/styles/components/gallery_section.css';
+  @import 'gallery_section.css';
 </style>
