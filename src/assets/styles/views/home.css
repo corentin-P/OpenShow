@@ -1,0 +1,31 @@
+@import '../main.css';
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.title {
+    font-size: 4em;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 2em;
+    width: 80vw;
+}
+
+.discover {
+    display: flex;
+    flex-direction: row;
+}
+
+.router-link {
+    font-size: 2em;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+}

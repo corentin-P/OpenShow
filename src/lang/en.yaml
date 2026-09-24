@@ -1,0 +1,200 @@
+main:
+  navbar:
+    title:
+      text: Home
+    links:
+      link-left:
+        text: Projects
+      link-middle:
+        text: Ongoing Projects
+      link-right:
+        text: About
+welcome:
+  title: Hey ! I'm <name>.
+  subtitle: Very short description
+  about: About me
+  projects: My projects
+about:
+  sumup:
+    text:
+    - 'You can do a small presentation here. '
+    - It can be on multiple lines
+    get-resume:
+      text: Download my resume
+  resume:
+    sections:
+      Education:
+        title: Education
+        content:
+          SC1:
+            date: Sept. 2024 – July 2027
+            description:
+            - 'School '
+            img-description: logo of school
+          SC2:
+            date: 2022 – 2024
+            description:
+            - Another school
+            img-description: logo of this other school
+          HS:
+            date: '2022'
+            description:
+            - High School
+            img-description: logo of High School
+      Experience:
+        title: Work Experience
+        content:
+          EXP1:
+            date: Sept. 2024 – Today
+            title: Last experience
+            description:
+            - '- one thing'
+            - '- Another thing'
+            img-description: logo of enterprise
+          EXP2:
+            date: Sept. 2023 – Aug. 2024
+            title: Another experience
+            description:
+            - '- 1'
+            - '- 2'
+            img-description: logo of enterprise
+      IT skills:
+        title: IT skills
+      Languages:
+        title: Languages
+        content:
+          French:
+            name: French
+            alt: French flag
+            description:
+            - Native speaker
+          English:
+            name: English
+            alt: United kingdom flag
+            description:
+            - text: C1 - cambridge
+              link: https://www.cambridgeenglish.org/exams-and-tests/qualifications/advanced/
+            - I also did an exchange in the USA
+    projects:
+      text: See my projects
+projects:
+  sections:
+    projects_gallery:
+      type: gallery
+      title: Projects
+      content:
+        project1:
+          title: Portfolio website project
+          sum_up: Development of my personal portfolio
+          description:
+          - Development of my personal portfolio
+          tags:
+          - language::Java
+          - DataMining
+        project2:
+          title: C project
+          sum_up: Development of a C CLI tool
+          description:
+          - Development of a C CLI tool
+          tags:
+          - language::C
+          - algorithm
+          - CLI tool
+          - Embedded application
+          - Test::Unit Test
+        project3:
+          title: Java project
+          sum_up: Development of a Java application
+          description:
+          - Development of a Java application
+          tags:
+          - web
+          - front-end
+        project4:
+          title: Example
+          sum_up: Example
+          description:
+          - Example
+          tags:
+          - web
+          - front-end
+        project5:
+          title: Test without main link
+          sum_up: Example
+          description:
+          - Example
+          tags:
+          - web
+          - front-end
+    Web:
+      title: Web
+      sumup: []
+      content:
+        My website:
+          title: My website
+          description:
+          - Description.
+          - On multiple lines.
+          imgs:
+            website:
+              alt: Capture
+          links:
+            GitHub:
+              text: first link
+            website:
+              text: second link
+        My second website:
+          title: My second website
+          description:
+          - Description
+          - On second line
+          imgs:
+            website:
+              alt: capture
+          links:
+            website:
+              text: link
+    Mobile:
+      title: Mobile Apps
+      sumup: []
+      content:
+        first mobile app:
+          title: My first Mobile app
+          description:
+          - It's my first mobile app.
+          - I'm very proud of it.
+          imgs:
+            login:
+              alt: Capture of the login page
+            feed:
+              alt: Capture of the feed in the mobile app
+          links:
+            GitHub-front:
+              text: See FrontEnd GitHub repository
+            GitHub-back:
+              text: See BackEnd GitHub repository
+ongoing-projects:
+  sections:
+    News:
+      title: News
+      sumup:
+      - Architecture as you want, like projects for example
+contact:
+  button: Contact
+  sections:
+    text:
+      title: 📧 Contact 📧
+      content:
+        Email:
+          name: Email
+          description:
+          - text: test@gmail.com
+            link: mailto:test@gmail.com
+        LinkedIn:
+          name: LinkedIn
+          description:
+          - text: See my profile
+            link: https://www.linkedin.com/
+not-found:
+  title: '404 : Page not found'
+  home: Back to home
