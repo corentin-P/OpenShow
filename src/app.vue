@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import NavBar from '@/components/navbar/NavBar.vue'
     import Contact from '@/components/contact/Contact.vue'
-    import langOption from '@/components/lang_choice/LangOption.vue'
+    import langOption from '@/components/lang_switcher/LangSwitcher.vue'
 </script>
 
 <template>

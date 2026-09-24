@@ -1,9 +1,9 @@
 <script setup lang="ts">
-  defineProps(['logos'])
+  defineProps(['content'])
 </script>
 
 <template>
-  <img v-for="logo in logos" class="logo" :src="logo.img" :alt="logo.alt">
+  <img v-for="logo in content.logos" class="logo" :src="logo.img" :alt="logo.alt">
 </template>
 
 <style lang="css">

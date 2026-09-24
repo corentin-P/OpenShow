@@ -41,13 +41,14 @@ about:
       IT skills:
         titleInBox: true
         type: logos-list
-        logos:
-        - img: /images/logos/IT/C.png
-          alt: Logo C
-        - img: /images/logos/IT/C++.png
-          alt: Logo C++
-        - img: /images/logos/IT/java.png
-          alt: Logo java
+        content:
+          logos:
+          - img: /images/logos/IT/C.png
+            alt: Logo C
+          - img: /images/logos/IT/C++.png
+            alt: Logo C++
+          - img: /images/logos/IT/java.png
+            alt: Logo java
       Languages:
         type: logos-description
         titleInBox: true

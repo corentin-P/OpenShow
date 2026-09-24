@@ -19,7 +19,7 @@
         <experience-section :experience="experience"/>
       </div>
       <div v-if="section.type == 'logos-list'" class="logos-list center">
-        <logo-list-section :logos="section.logos"/>
+        <logo-list-section :content="section.content"/>
       </div>
       <div v-if="section.type == 'logos-description'" class="logos-list">
         <logos-descriptions-section :content="section.content"/>
