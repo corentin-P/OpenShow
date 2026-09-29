@@ -2,14 +2,15 @@
   import { ref, computed } from 'vue'
   import Modal from '@/components/modal/Modal.vue'
   import Tags from '@/components/tags/Tags.vue'
+  import type { GallerySectionModel, GalleryItemModel } from '@/components/section_gallery/GallerySectionModel'
 
-  const props = defineProps(['items'])
+  const props = defineProps<GallerySectionModel>()
 
   const isModalOpen = ref<boolean>(false)
   const currentItemIndex = ref<string | null>(null)
   
   const currentItem = computed(() => {
-    return currentItemIndex.value !== null ? props.items[currentItemIndex.value] : {}
+    return currentItemIndex.value !== null ? props.content[currentItemIndex.value] : {}
   })
 
   const openModal = (index: string) => {
@@ -20,19 +21,19 @@
 
 <template>
   <div class="cards">
-    <div v-for="(item, index) in items" class="card" v-on:click="openModal(String(index))">
+    <div v-for="(item, index) in content" class="card" v-on:click="openModal(String(index))">
       <div class="card-content">
         <img :src="item.img" :alt="item.alt">
         <hr>
         <h2>{{ item.title }}</h2>
         <hr>
         <p>{{ item.sum_up }}</p>
-        <Tags :tags="item.tags"/>
+        <Tags :content="item.tags"/>
       </div>
     </div>
   </div>
 
-  <Modal :modalContent="currentItem" v-model:isModalOpen="isModalOpen"/>
+  <Modal :modalContent="currentItem as GalleryItemModel" v-model:isModalOpen="isModalOpen"/>
 
 </template>
 

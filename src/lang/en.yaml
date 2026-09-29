@@ -15,14 +15,21 @@ welcome:
   about: About me
   projects: My projects
 about:
-  sumup:
-    text:
-    - 'You can do a small presentation here. '
-    - It can be on multiple lines
-    get-resume:
-      text: Download my resume
   resume:
     sections:
+      Sumup:
+        content:
+          profile-image:
+            content:
+              alt: Me
+          text:
+            content:
+              text:
+                - You can do a small presentation here.
+                - It can be on multiple lines
+              links:
+                resume:
+                  text: Download my resume
       Education:
         title: Education
         content:

@@ -1,9 +1,11 @@
 <script setup lang="ts">
-  defineProps(['projects'])
+  import type { ProjectSectionModel } from '@/components/section_project/ProjectSectionModel'
+
+  defineProps<ProjectSectionModel>()
 </script>
 
 <template>
-  <div v-for="project in projects" class="project">
+  <div v-for="project in content" class="project">
     <h2 class="center">{{ project.title }}</h2>
     <p v-for="desc in project.description">{{ desc }}</p>
 

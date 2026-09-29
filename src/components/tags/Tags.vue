@@ -1,10 +1,11 @@
 <script setup lang="ts">
-  defineProps(['tags'])
+  import type { TagsModel } from '@/components/tags/TagsModel';
+  const props = defineProps<TagsModel>()
 </script>
 
 <template>
   <div class="tags">
-    <span class="tag" v-for="tag in tags">
+    <span class="tag" v-for="tag in content">
       <div v-if="tag.includes('::')">
         <span class="tag-left">{{ tag.split('::')[0] }}</span>
         <span class="tag-right">{{ tag.split('::')[1] }}</span>

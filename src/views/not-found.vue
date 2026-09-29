@@ -5,7 +5,7 @@
 <template>
   <div class="not-found">
     <h1>{{ $t('not-found.title') }}</h1>
-    <MyRouterLink to="/" :text="$t('not-found.home')" type="button-arrow"/>
+    <MyRouterLink :content="{ to: '/', text: $t('not-found.home') }" type="button-arrow"/>
   </div>
 </template>
 

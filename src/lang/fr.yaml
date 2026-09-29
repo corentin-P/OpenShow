@@ -1,7 +1,7 @@
 main:
   navbar:
     title:
-      text: <name>
+      text: Accueil
     links:
       link-left:
         text: Projets
@@ -15,14 +15,21 @@ welcome:
   about: A propos
   projects: Mes projets
 about:
-  sumup:
-    text:
-    - Petite présentation
-    - Sur plusieurs lignes
-    get-resume:
-      text: Télécharger mon CV
   resume:
     sections:
+      Sumup:
+        content:
+          profile-image:
+            content:
+              alt: Moi
+          text:
+            content:
+              text:
+                - Petite présentation
+                - Sur plusieurs lignes
+              links:
+                resume:
+                  text: Télécharger mon CV
       Education:
         title: Education
         content:

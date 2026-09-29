@@ -4,7 +4,7 @@
 
 <template>
   <div class="contact">
-    <MyRouterLink to="/contact" :text="String($tm('contact.button'))"/>
+    <MyRouterLink :content="{ to: '/contact', text: String($tm('contact.button')) }"/>
   </div>
 </template>
 

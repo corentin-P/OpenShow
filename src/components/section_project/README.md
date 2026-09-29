@@ -12,7 +12,7 @@ The `Project Section` component displays one or more project entries in a struct
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `projects` | `Array` | Yes | — | Array of project objects | A list of project objects, each with a title, description, optional links, and optional images. |
+| `content` | `Array` | Yes | — | Array of project objects | A list of project objects, each with a title, description, optional links, and optional images. |
 
 ### Example structure
 

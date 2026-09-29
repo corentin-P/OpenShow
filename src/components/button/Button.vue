@@ -1,18 +1,7 @@
 <script setup lang="ts">
-  defineProps({
-    text: {
-      type: String,
-      required: true
-    },
-    type: {
-      type: String,
-      default: ''
-    },
-    href: {
-      type: String,
-      default: ''
-    }
-  })
+  import type { ButtonModel } from '@/components/button/ButtonModel'
+
+  defineProps<ButtonModel>()
 </script>
 
 <template>

@@ -13,13 +13,21 @@ welcome:
   projects-url: projects
   about-url: about
 about:
-  sumup:
-    profile_image: /images/me.png
-    profile_image_desc: Me
-    get-resume:
-      url: /resume.pdf
   resume:
     sections:
+      Sumup:
+        type: column
+        content:
+          profile-image:
+            type: ProfileImage
+            content:
+              src: /images/me.png
+          text:
+            type: Text
+            content:
+              links:
+                resume:
+                  url: /resume.pdf
       Education:
         type: experience
         titleInBox: true

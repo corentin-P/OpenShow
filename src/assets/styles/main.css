@@ -32,13 +32,13 @@ body {
     margin-top: 4vh;
 }
 
-.content {
+.main-page-content {
     margin-top: 3vh;
     margin-left: 2vw;
     margin-right: 2vw;
 }
 
-.text {
+.main-text {
     margin-top: 2vh;
     margin-bottom: 2vh;
     background-color: var(--black-color40);
@@ -50,7 +50,7 @@ body {
     text-align: justify;
 }
 
-.text h1, h2 {
+.main-text h1, h2 {
     text-align: center;
 }
 
@@ -74,11 +74,7 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
-    .main {
-        margin-top: 8vh;
-    }
-    
-    .content {
+    .main-page-content {
         margin-top: 10vh;
         margin-left: 15vw;
         margin-right: 15vw;

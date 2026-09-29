@@ -1,11 +1,9 @@
 <script setup lang="ts">
   import { watch, onMounted, onBeforeUnmount } from 'vue'
   import Tags from '@/components/tags/Tags.vue'
+  import type { ModalModel } from '@/components/modal/ModalModel'
 
-  const props = defineProps<{
-    modalContent: Record<string, any>
-    isModalOpen: boolean
-  }>()
+  const props = defineProps<ModalModel>()
   
 
   const emit = defineEmits<{
@@ -72,10 +70,10 @@
       </h1>
       <hr>
       <p v-for="line in modalContent.description">{{ line }}</p>
-      <Tags :tags="modalContent.tags"/>
+      <Tags :content="modalContent.tags"/>
       <div class="icon-links">
         <a v-for="link in modalContent.links" :href="link.link" target="_blank">
-          <img :src="link.icon" alt="link.alt" class="icon"/>
+          <img :src="link.icon" :alt="link.alt" class="icon"/>
         </a>
       </div>
     </div>

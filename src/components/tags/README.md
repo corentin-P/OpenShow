@@ -12,7 +12,7 @@ The `Tags` component renders a list of small badges used to highlight technologi
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `tags` | `Array` | Yes | — | Array of strings such as `'Vue'` or `'Frontend::JavaScript'` | A list of tag strings. Each item may be a plain string or a split value using `prefix::suffix`. |
+| `content` | `Array` | Yes | — | Array of strings such as `'Vue'` or `'Frontend::JavaScript'` | A list of tag strings. Each item may be a plain string or a split value using `prefix::suffix`. |
 
 ### Example structure
 

@@ -1,19 +1,12 @@
 <script setup lang="ts">
   import Button from '@/components/button/Button.vue'
-  defineProps({
-    to: {
-      type: String,
-      required: true
-    },
-    text: {
-      type: String,
-      required: true
-    }
-  })
+  import type { MyRouterLinkModel } from '@/components/router_link/MyRouterLinkModel'
+
+  defineProps<MyRouterLinkModel>()
 </script>
 
 <template>
-  <RouterLink :to="to">
-    <Button type="button-arrow" :text="text"/>
+  <RouterLink :to="content.to">
+    <Button type="button-arrow" :text="content.text"/>
   </RouterLink>
 </template>

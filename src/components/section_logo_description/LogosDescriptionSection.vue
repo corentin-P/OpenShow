@@ -1,5 +1,7 @@
 <script setup lang="ts">
-  defineProps(['content'])
+  import type { LogosDescriptionSectionModel } from '@/components/section_logo_description/LogosDescriptionSectionModel'
+
+  defineProps<LogosDescriptionSectionModel>()
 </script>
 
 <template>

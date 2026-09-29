@@ -12,7 +12,7 @@ The `Experience Section` component displays a single professional or educational
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `experience` | `Object` | Yes | — | A single experience item object | A single experience item containing a date, image, image description, title, and description list. |
+| `content` | `Object` | Yes | — | A single experience item object | A single experience item containing a date, image, image description, title, and description list. |
 
 ### Example structure
 

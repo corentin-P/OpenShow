@@ -1,14 +1,16 @@
 <script setup lang="ts">
-  defineProps(['experience'])
+  import type { ExperienceSectionModel } from '@/components/section_experience/ExperienceSectionModel'
+
+  defineProps<ExperienceSectionModel>()
 </script>
 
 <template>
-  <h3 v-if="experience.date">{{ experience.date }} :</h3>
+  <h3 v-if="content.date">{{ content.date }} :</h3>
   <div class="experience">
-    <img class="symbol" :src="`${ experience.img }`" :alt="`${ experience['img-description'] }`">
+    <img class="symbol" :src="`${ content.img }`" :alt="`${ content['img-description'] }`">
     <div>
-      <h3 v-if="experience.title">{{ experience.title }}</h3>
-      <p v-for="desc in experience.description">{{ desc }}</p>
+      <h3 v-if="content.title">{{ content.title }}</h3>
+      <p v-for="desc in content.description">{{ desc }}</p>
     </div>
   </div>
 </template>
