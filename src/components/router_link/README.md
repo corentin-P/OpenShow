@@ -12,5 +12,4 @@ The `Router Link Button` component wraps a Vue Router link around a reusable `Bu
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `to` | `String` | Yes | — | Any valid Vue Router route path | Target route for navigation. |
-| `text` | `String` | Yes | — | Any visible label | Text shown inside the wrapped button. |
+| `content` | `MyRouterLinkModel.content` | Yes | — | Object containing text and route | See [MyRouterLinkModel.ts](./MyRouterLinkModel.ts) |

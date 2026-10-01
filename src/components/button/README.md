@@ -13,6 +13,4 @@ If you need to do a link to another page in this website, consider using the [ro
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `text` | `String` | Yes | — | | Label displayed inside the button. |
-| `href` | `String` | No | `''` | Any valid URL or route path | Destination URL used by the anchor element. |
-| `type` | `String` | No | `''` | `'button-arrow'`, or other CSS modifier classes | Optional style modifier applied to the button. |
+| `content` | `ButtonModel.content` | Yes | — | | Content of the button. See [ButtonModel.ts](./ButtonModel.ts) |

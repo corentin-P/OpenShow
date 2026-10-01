@@ -12,7 +12,7 @@ The `ProfileImage` component displays a circular profile image. The image source
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `content` | `Object` | Yes | — | Object containing the image source and its alternative text. |
+| `content` | `ProfileImageModel.content` | Yes | — | Object containing the image source and its alternative text. |
 
 ### Example structure
 

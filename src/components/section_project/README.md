@@ -12,17 +12,18 @@ The `Project Section` component displays one or more project entries in a struct
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `content` | `Array` | Yes | — | Array of project objects | A list of project objects, each with a title, description, optional links, and optional images. |
+| `content` | `ProjectSectionModel` | Yes | — | Map of project objects | A map of project objects, each with a title, description, optional links, and optional images. See [ProjectSectionModel.ts](./ProjectSectionModel.ts) |
 
 ### Example structure
 
 ```ts
 [
-  {
+  "project1" : {
     title: 'OpenShow',
     description: ['A portfolio application', 'Built with Vue.js'],
     links: [{ text: 'Repository', link: 'https://example.com' }],
     imgs: [{ file: '/img/project.png', alt: 'Project screenshot', link: 'https://example.com' }]
-  }
+  },
+  ...
 ]
 ```

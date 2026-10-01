@@ -13,6 +13,6 @@ export interface GalleryItemModel {
   }>;
 }
 
-export interface GallerySectionModel {
+export interface GallerySectionComponentModel {
   content: Record<string, GalleryItemModel>;
 }

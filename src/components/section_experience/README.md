@@ -12,16 +12,19 @@ The `Experience Section` component displays a single professional or educational
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `content` | `Object` | Yes | — | A single experience item object | A single experience item containing a date, image, image description, title, and description list. |
+| `content` | `ExperienceSectionModel` | Yes | — | A map of experiences item object | A map experiences item containing a date, image, image description, title, and description list. See [ExperienceSectionModel.ts](./ExperienceSectionModel.ts) |
 
 ### Example structure
 
 ```ts
 {
-  date: '2023',
-  img: '/path/to/icon.png',
-  'img-description': 'Experience icon',
-  title: 'Project Manager',
-  description: ['First paragraph', 'Second paragraph']
+  "exp1": {
+    date: '2023',
+    img: '/path/to/icon.png',
+    'img-description': 'Experience icon',
+    title: 'Project Manager',
+    description: ['First paragraph', 'Second paragraph']
+  },
+  ...
 }
 ```

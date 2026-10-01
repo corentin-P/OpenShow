@@ -9,6 +9,8 @@ main:
         url: ongoing-projects
       link-right:
         url: about
+  contact_button:
+    url: /contact
 welcome:
   projects-url: projects
   about-url: about
@@ -28,6 +30,10 @@ about:
               links:
                 resume:
                   url: /resume.pdf
+          button:
+            type: Button
+            content:
+              href: /resume.pdf
       Education:
         type: experience
         titleInBox: true

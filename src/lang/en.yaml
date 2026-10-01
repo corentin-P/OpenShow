@@ -9,6 +9,8 @@ main:
         text: Ongoing Projects
       link-right:
         text: About
+  contact_button:
+    text: Contact
 welcome:
   title: Hey ! I'm <name>.
   subtitle: Very short description
@@ -30,6 +32,9 @@ about:
               links:
                 resume:
                   text: Download my resume
+          button:
+            content:
+              text: Download my resume
       Education:
         title: Education
         content:
@@ -187,7 +192,6 @@ ongoing-projects:
       sumup:
       - Architecture as you want, like projects for example
 contact:
-  button: Contact
   sections:
     text:
       title: 📧 Contact 📧

@@ -2,9 +2,9 @@
   import { ref, computed } from 'vue'
   import Modal from '@/components/modal/Modal.vue'
   import Tags from '@/components/tags/Tags.vue'
-  import type { GallerySectionModel, GalleryItemModel } from '@/components/section_gallery/GallerySectionModel'
+  import type { GallerySectionComponentModel, GalleryItemModel } from '@/components/section_gallery/GallerySectionModel'
 
-  const props = defineProps<GallerySectionModel>()
+  const props = defineProps<GallerySectionComponentModel>()
 
   const isModalOpen = ref<boolean>(false)
   const currentItemIndex = ref<string | null>(null)

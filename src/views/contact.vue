@@ -1,12 +1,12 @@
 <script setup lang="ts">
   import Sections from '@/components/sections/Sections.vue'
-  import type { SectionModel } from '@/components/sections/SectionsModel';
+  import type { SectionsModel } from '@/components/sections/SectionsModel';
 </script>
 
 <template>
   <body>
     <div class="main-page-content">
-      <Sections :sections="$tm('contact.sections') as SectionModel" />
+      <Sections :sections="$tm('contact.sections') as SectionsModel" />
     </div>
   </body>
 </template>

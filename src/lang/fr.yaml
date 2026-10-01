@@ -9,6 +9,8 @@ main:
         text: Projects en cours
       link-right:
         text: A propos
+  contact_button:
+    text: Contact
 welcome:
   title: Hey ! Je suis <nom>.
   subtitle: Petite description
@@ -30,6 +32,9 @@ about:
               links:
                 resume:
                   text: Télécharger mon CV
+          button:
+            content:
+              text: Télécharger mon CV
       Education:
         title: Education
         content:
@@ -182,7 +187,6 @@ ongoing-projects:
       sumup:
       - Architecture comme dans les projets
 contact:
-  button: Contact
   sections:
     text:
       title: 📧 Contact 📧

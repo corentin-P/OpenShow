@@ -12,7 +12,7 @@ The `Text` component displays a list of paragraphs and a list of links styled as
 
 | Name | Type | Required | Default | Description |
 | --- | --- | --- | --- | --- |
-| `content` | `Object` | Yes | — | Object containing paragraph strings and link entries. |
+| `content` | `TextModel` | Yes | — | Object containing paragraph strings and link entries. See [TextModel.ts](./TextModel.ts). |
 
 ### Example structure
 

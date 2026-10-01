@@ -1,13 +1,17 @@
 <script setup lang="ts">
   import Text from '@/components/text/Text.vue'
   import ProfileImage from '@/components/profile_image/ProfileImage.vue'
-  import type { ColumnSectionModel } from '@/components/section_column/ColumnSectionModel'
+  import Button from '@/components/button/Button.vue'
+  import MyRouterLink from '@/components/router_link/MyRouterLink.vue'
+  import type { ColumnSectionComponentModel } from '@/components/section_column/ColumnSectionModel'
 
-  const props = defineProps<ColumnSectionModel>()
+  const props = defineProps<ColumnSectionComponentModel>()
 
   const column_types = {
     "Text": Text,
     "ProfileImage": ProfileImage,
+    "Button": Button,
+    "RouterLink": MyRouterLink
   }
 </script>
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import type { ProjectSectionModel } from '@/components/section_project/ProjectSectionModel'
+  import type { ProjectSectionComponentModel } from '@/components/section_project/ProjectSectionModel'
 
-  defineProps<ProjectSectionModel>()
+  defineProps<ProjectSectionComponentModel>()
 </script>
 
 <template>

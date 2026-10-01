@@ -5,8 +5,8 @@
 </script>
 
 <template>
-  <a :class="['button', type]" :href="href">
-    {{ text }}
+  <a :class="['button', content.type]" :href="content.href">
+    {{ content.text }}
   </a>
 </template>
 

@@ -12,7 +12,7 @@ The `Logos Description Section` component shows a list of company or technology 
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `content` | `Array` | Yes | — | Array of logo/skill entries | Each entry includes an image, alt text, name, and description array. |
+| `content` | `LogosDescriptionSectionModel` | Yes | — | Array of logo/skill entries | Each entry includes an image, alt text, name, and description array. See [LogosDescriiptionSectionModel.ts](./LogosDescriptionSectionModel.ts). |
 
 ### Example structure
 

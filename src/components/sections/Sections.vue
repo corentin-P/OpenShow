@@ -6,9 +6,9 @@
   import LogoListSection from '@/components/section_logo_list/LogoListSection.vue';
   import ColumnSection from '@/components/section_column/ColumnSection.vue';
   import { is_text_section } from '../utils';
-  import type { SectionsModel } from '@/components/sections/SectionsModel';
+  import type { SectionsComponentModel } from '@/components/sections/SectionsModel';
   
-  defineProps<SectionsModel>()
+  defineProps<SectionsComponentModel>()
 </script>
 
 <template>
@@ -18,8 +18,8 @@
       <h1 v-if="section.titleInBox" class="center">{{ section.title }}</h1>
       <p v-if="section.sumup" v-for="text in section.sumup" class="center">{{ text }}</p>
       
-      <div v-if="section.type == 'experience'" v-for="experience in section.content">
-        <experience-section :content="experience"/>
+      <div v-if="section.type == 'experience'">
+        <experience-section :content="section.content"/>
       </div>
       <div v-if="section.type == 'logos-list'" class="logos-list center">
         <logo-list-section :content="section.content"/>

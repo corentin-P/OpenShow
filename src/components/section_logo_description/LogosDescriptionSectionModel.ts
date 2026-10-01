@@ -1,5 +1,5 @@
 export interface LogosDescriptionSectionModel {
-  content: Record<string, {
+  [key: string]: {
     img: string;
     alt: string;
     name: string;
@@ -7,5 +7,9 @@ export interface LogosDescriptionSectionModel {
       text: string;
       link: string;
     }>;
-  }>;
+  }
+}
+
+export interface LogosDescriptionSectionComponentModel {
+  content: LogosDescriptionSectionModel;
 }

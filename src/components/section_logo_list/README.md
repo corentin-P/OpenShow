@@ -12,7 +12,7 @@ The `Logo List Section` component displays a row of logo images used for brand, 
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `content` | `Object` | Yes | — | Object containing an array of logo objects | A list of image entries, each with an image path and alternate text. |
+| `content` | `LogoListSectionModel` | Yes | — | Object containing an array of logo objects | A list of image entries, each with an image path and alternate text. |
 
 ### Example structure
 

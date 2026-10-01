@@ -8,7 +8,7 @@ The `Sections` component acts as a dispatcher for the website's content blocks. 
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `sections` | `Object` | Yes | — | Section map | A configuration object keyed by section name. Each entry defines the rendered content and section type. |
+| `sections` | `SectionsModel` | Yes | — | Section map | A configuration object keyed by section name. Each entry defines the rendered content and section type. See [SectionsModel.ts](./SectionsModel.ts) |
 
 ### Sections object
 

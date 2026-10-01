@@ -1,8 +1,10 @@
 export interface LogoListSectionModel {
-  content: {
-    logos: Array<{
-      img: string;
-      alt: string;
-    }>;
-  };
+  logos: Array<{
+    img: string;
+    alt: string;
+  }>;
+}
+
+export interface LogoListSectionComponentModel {
+  content: LogoListSectionModel;
 }

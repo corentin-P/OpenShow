@@ -1,4 +1,4 @@
-export interface SectionModel {
+export interface SectionsModel {
   [key: string]: {
     type: string;
     content: any;
@@ -8,6 +8,6 @@ export interface SectionModel {
   }
 }
 
-export interface SectionsModel {
-  sections: SectionModel;
+export interface SectionsComponentModel {
+  sections: SectionsModel;
 }

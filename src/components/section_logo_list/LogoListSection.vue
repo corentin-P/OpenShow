@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import type { LogoListSectionModel } from '@/components/section_logo_list/LogoListSectionModel'
+  import type { LogoListSectionComponentModel } from '@/components/section_logo_list/LogoListSectionModel'
 
-  defineProps<LogoListSectionModel>()
+  defineProps<LogoListSectionComponentModel>()
 </script>
 
 <template>

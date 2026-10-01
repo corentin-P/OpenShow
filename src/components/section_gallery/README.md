@@ -13,13 +13,13 @@ The `Gallery Section` component renders a list of cards representing items in a 
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| `items` | `Array` | Yes | — | Array of gallery item objects | Each object contains an image, alt text, title, summary, and tags. |
+| `items` | `GallerySectionComponentModel.content` | Yes | — | Array of gallery item objects | Each object contains an image, alt text, title, summary, and tags. See [GallerySectionModel.ts](./GallerySectionModel.ts) |
 
 ### Example structure
 
 ```ts
 [
-  {
+  "Item1": {
     img: '/path/to/image.jpg',
     alt: 'Project preview',
     title: 'Name of the project',

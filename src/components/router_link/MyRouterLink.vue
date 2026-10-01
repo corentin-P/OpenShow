@@ -7,6 +7,6 @@
 
 <template>
   <RouterLink :to="content.to">
-    <Button type="button-arrow" :text="content.text"/>
+    <Button :content="{ type: 'button-arrow', text: content.text }"/>
   </RouterLink>
 </template>
