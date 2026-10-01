@@ -1,11 +1,12 @@
 <script setup lang="ts">
-    import Sections from '@/components/Sections.vue'
+    import Sections from '@/components/sections/Sections.vue'
+    import type { SectionsModel } from '@/components/sections/SectionsModel';
 </script>
 
 <template>
   <body>
-    <div class="content">
-      <Sections :sections="$tm('ongoing-projects.sections')"/>
+    <div class="main-page-content">
+      <Sections :sections="$tm('ongoing-projects.sections') as SectionsModel" />
     </div>
   </body>
 </template>
