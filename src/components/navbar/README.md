@@ -14,4 +14,4 @@ This component does not define any props.
 
 | Name | Type | Required | Default | Possible values | Description |
 | --- | --- | --- | --- | --- | --- |
-| None | — | No | — | — | No inputs are required for this component. |
+| `content` | `NavBarContentModel` | Yes | — | — | Content of the navbar. See [NavBarModel.ts file](./NavBarModel.ts). |

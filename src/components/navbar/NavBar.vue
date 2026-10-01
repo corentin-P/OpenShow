@@ -1,21 +1,19 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  
+  import type { NavBarComponentModel } from '@/components/navbar/NavBarModel'
+
+  defineProps<NavBarComponentModel>()
   const show = ref(false)
-  type Link = {
-      url: string,
-      text: string
-  }
 </script>
 
 <template>
   <div class="navbar">
     <div class="home">
-      <RouterLink :to="$t('main.navbar.title.url')">{{ $t("main.navbar.title.text") }}</RouterLink>
+      <RouterLink :to="content.title.url">{{ content.title.text }}</RouterLink>
     </div>
     <nav>
       <ul class="desktop-pages">
-        <li v-for="link in $tm('main.navbar.links') as Link[]">
+        <li v-for="link in content.links">
           <RouterLink class="pages" :to="link.url">{{ link.text }}</RouterLink>
         </li>
       </ul>
@@ -29,7 +27,7 @@
   <Transition>
     <nav v-show="show" class="mobile-pages-menu">
       <ul>
-        <li v-for="link in  $tm('main.navbar.links') as Link[]" class="mobile-pages">
+        <li v-for="link in content.links" class="mobile-pages">
           <RouterLink class="pages" :to="link.url">{{ link.text }}</RouterLink>
         </li>
       </ul>
