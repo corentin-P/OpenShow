@@ -1,25 +1,16 @@
 <script setup lang="ts">
-  import Sections from '@/components/Sections.vue'
+  import Sections from '@/components/sections/Sections.vue'
+  import MyRouterLink from '@/components/router_link/MyRouterLink.vue'
+  import type { SectionsModel } from '@/components/sections/SectionsModel';
 </script>
 
 <template>
   <body>
-    <div class="content">
-      <div class="sum-up">
-        <img :src="$t('about.sumup.profile_image')" :alt="$t('about.sumup.profile_image_desc')">
-        <div class="text">
-          <p v-for="text in $tm('about.sumup.text')">{{ text }}</p> 
-          <a class="button button-arrow button-right" :href="`${ $t('about.sumup.get-resume.url') }`">{{ $t("about.sumup.get-resume.text") }}</a>
-        </div>
-      </div>
-      <Sections :sections="$tm('about.resume.sections')"/>
+    <div class="main-page-content">
+      <Sections :sections="$tm('about.resume.sections') as SectionsModel" />
       <div class="center space">
-        <RouterLink class="button button-arrow" :to="`${ $t('about.resume.projects.url') }`">{{ $t("about.resume.projects.text") }}</RouterLink>
+        <MyRouterLink :content="{ to: `${ $t('about.resume.projects.url') }`, text: $t('about.resume.projects.text') }"/>
       </div>
     </div>
   </body>
 </template>
-
-<style lang="css">
-  @import '@/assets/styles/pages/about.css';
-</style>

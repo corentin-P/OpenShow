@@ -1,11 +1,16 @@
 import { createI18n } from 'vue-i18n';
 import { deepmerge } from "deepmerge-ts";
+import { parse } from 'yaml';
 
-import config from './config.json'
+import configYaml from './config.yaml?raw'
 // translations imports 
-import messages_en from './en.json'
-import messages_fr from './fr.json'
+import messagesEnYaml from './en.yaml?raw'
+import messagesFrYaml from './fr.yaml?raw'
 // --- add here the imports for the other langages ---
+
+const config = parse(configYaml);
+const messages_en = parse(messagesEnYaml);
+const messages_fr = parse(messagesFrYaml);
 
 const en = deepmerge(config, messages_en);
 const fr = deepmerge(config, messages_fr);

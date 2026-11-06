@@ -1,132 +1,73 @@
-# How to configure the website (langs)
+# Configuration and translations
 
-This website is highly customizable by JSON files and can be translated in different langages. You must create these translations files here. If you only want one langage, you'll just need to create one file. 
+This directory contains the website's shared configuration and one YAML file per language. The files are loaded by [`importLangs.ts`](./importLangs.ts).
 
-## File architecture
-__Files__ : You'll need one file (config.json) to configure what is common of all the langages like the images or the links you want to put on your page. Then, you'll need one JSON file per langage you want to add.
+## Files
 
-The structure of this folder must look like this (lang_code:  'en' for english for exemple): 
-```
-|
-|_ importLangs.ts
-|_ config.json
-|_ lang_code1.json
-|_ lang_code2.json
-|_ ...
-|_ lang_codeN.json
+```text
+src/lang/
+|- importLangs.ts
+|- config.yaml       # Shared links, images, and options
+|- en.yaml           # English translations
+`- fr.yaml           # French translations
 ```
 
-## The importLangs.ts file
-You will need to modify the [`importLangs.ts`](./importLangs.ts) file to create the new langages that you add. For instance, you'll need to modify : 
-- The import section :
-    
-    - Add the line `import messages_<lang_code>.json from './<lang_code>.json'`
-    - Remove the langages that you don't have configured (messages_fr.json for example)
-- The complete langage : 
-    - Add the line `const <lang_code> = deepmerge(config, messages_<lang_code>);` under the similar lines 
-    - Remove the lines of the langages you don't use 
-- At this line : 
-    
-    ```export const i18n = createI18n<[Schema], "en" | "fr">```
+`config.yaml` contains values shared by all languages, such as URLs, images, and section types. Each language file contains only the text displayed to users. Keys from `config.yaml` and the translation files are merged recursively.
 
-    - Add the code of the langages you've added separated by a pipe (|)
-    - Remove the code you don't use (fr for example)
-- At this line : 
+## YAML format
 
-    ```messages: {en, fr}```
-    - Add the code of the langages you've added separated by a ','
-    - Remove the code you don't use (fr for example)
+The files use two-space indentation. Lists are introduced with `-`, and keys containing spaces or hyphens are valid without quotes:
 
-## JSON file architecture  
+```yaml
+welcome:
+  title: Hey ! I'm <name>.
+  projects: My projects
 
-All your JSON file (except config.json) must have the same structure. There is __ONE__ object per page and __ONE__ main object to put the datas shared between the pages (the navbar for example)
-
-
+about:
+  sumup:
+    text:
+      - First line
+      - Second line
 ```
-type Sections = 
-{
-    [index: string] : {
-        // config
-        type: "experience" | "logos-list" | "logos-description" | "projects",
-        titleInBox?: boolean,
-        // lang
-        title: string,
-        sumup?: [],
-        logos?: [{
-            img: string,
-            alt: string,
-        }],
-        content: {
-            [index: string]: {
-                date?: string,
-                title?: string,
-                description?: [],
-                "img-description"?: string,
-                img?: string,
-                name?:string,
-                alt?: string,
-                imgs?: {
-                    [index: string]: {
-                        alt?: string,
-                        file: string,
-                        link?: string
-                    }
-                },
-                links?: {
-                    [index: string]: {
-                        text: string,
-                        link: string
-                    }
-                }
 
-            }
-        }
-    }
-};
+Keep the same keys in every language file. Values can be strings, lists, or nested objects. Quote a value if it starts with a character that has a special meaning in YAML (`#`, `-`, `:`, etc.), or if it must always remain a string.
 
-type Main = {
-    navbar: {
-        title: {
-            text: string
-        },
-        links: {
-            [index: string]: {
-                "text": string
-            }
-        }
-    }
-}
+## Adding a language
 
-type Welcome = {
-    title: string,
-    subtitle: string,
-    about: string,
-    projects: string,
-}
+1. Copy `en.yaml` to a new file, for example `de.yaml`, and translate only the text values.
+2. In [`importLangs.ts`](./importLangs.ts), import the file as raw text:
 
-type About = {
-    sumup: 
-    {
-        text: [string],
-        projects: {
-            text: string
-        },
-        resume: {
-            "sections": Sections
-        }
-    },
-}
+   ```ts
+   import messagesDeYaml from './de.yaml?raw'
+   ```
 
-type Lang = {
-    main: Main,
-    welcome: Welcome,
-    about: About,
-    projects: Sections,
-    "ongoing-projects": Sections
-}
+3. Parse the file and merge it with the shared configuration:
 
-export type langs = {
-    en: Lang,
-    fr: Lang,
-}
-```
+   ```ts
+   const messages_de = parse(messagesDeYaml)
+   const de = deepmerge(config, messages_de)
+   ```
+
+4. Add `de` to the locale type and to `messages`:
+
+   ```ts
+   createI18n<[Schema], 'en' | 'fr' | 'de'>({
+     messages: { en, fr, de }
+   })
+   ```
+
+5. Add `de` to the available languages if it should be displayed in the language selector.
+
+## Data structure
+
+Each language file contains one object per page, as well as a `main` object for shared data such as the navigation bar.
+
+Sections use the following fields in particular:
+
+- `type`: section type (`experience`, `logos-list`, `logos-description`, `projects`, or `gallery`)
+- `title`: translated section title
+- `content`: section content
+- `description` and `sumup`: text displayed as a list
+- `imgs` and `links`: project images and links
+
+The structure of `config.yaml` must remain compatible with the language files. Configuration values such as `img`, `file`, `url`, and `link` stay in `config.yaml`, while visible values such as `title`, `text`, `alt`, and `description` are translated in `en.yaml` and `fr.yaml`.
